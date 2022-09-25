@@ -94,6 +94,22 @@ tr th {
 }
 
 @media (min-width: 768px) {
+    .card_numer {
+        display: block;
+        width: 100%;
+        word-spacing: 4px;
+        font-size: 25px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: transparent;
+        text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+            1px 1px 1px rgba(0, 0, 0, 1),
+            1px 0px 1px rgba(255, 255, 255, 1),
+            -1px -1px 1px rgba(0, 0, 0, 1),
+            -1px 1px 1px rgba(0, 0, 0, 1);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    }
 
     form {
         padding: 50px;
@@ -445,22 +461,7 @@ tr th {
     background-color: #222222;
 }
 
-.card_numer {
-    display: block;
-    width: 100%;
-    word-spacing: 4px;
-    font-size: 25px;
-    letter-spacing: 2px;
-    text-align: center;
-    color: transparent;
-    text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
-        1px 1px 1px rgba(0, 0, 0, 1),
-        1px 0px 1px rgba(255, 255, 255, 1),
-        -1px -1px 1px rgba(0, 0, 0, 1),
-        -1px 1px 1px rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
-    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
-}
+
 
 .card__space-75 {
     width: 75%;
