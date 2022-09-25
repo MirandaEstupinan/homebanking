@@ -87,6 +87,10 @@ tr th {
         height: 100%;
         text-align: center;
     }
+
+    .card_numer {
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -456,7 +460,6 @@ tr th {
         -1px 1px 1px rgba(0, 0, 0, 1);
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
-
 }
 
 .card__space-75 {
