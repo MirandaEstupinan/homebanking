@@ -92,7 +92,20 @@ tr th {
     }
 
     .card_numer {
-        font-size: 15px;
+        display: block;
+        width: 100%;
+        word-spacing: 4px;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: transparent;
+        text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+            1px 1px 1px rgba(0, 0, 0, 1),
+            1px 0px 1px rgba(255, 255, 255, 1),
+            -1px -1px 1px rgba(0, 0, 0, 1),
+            -1px 1px 1px rgba(0, 0, 0, 1);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
     }
 }
 
