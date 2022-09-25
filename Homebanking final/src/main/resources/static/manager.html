@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        <form class="w-50" >
+            <div class="mb-3">
+                <h3>Client Manager</h3>
+                <label for="firstName">Name:</label>
+                <input class="form-control" type="text" aria-label="default input example" name="firstName" id="firstName" v-model="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input class="form-control" type="text" aria-label="default input example" id="lastName"
+                    name="lastName" v-model="lastName" required>
+                <label for="email" class="form-label">Email address</label>
+                <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            </div>
+            <button type="button" @click="addClient()" class="btn btn-primary">Add Client</button>
+        </form>
+
+
+        <table class="table table-striped">
+            <h3>Client List</h3>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-active" v-for="client in clients">
+                    <td>{{client.firstName}}</td>
+                    <td>{{client.lastName}}</td>
+                    <td>{{client.email}}</td>
+
+                </tr>                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./manager.js"></script>
+</body>
+
+</html>

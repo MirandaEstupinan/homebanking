@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+    <title>Loan application</title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <header>
+            <div class="d-md-flex justify-content-around divLogo align-items-center justify-content-lg-around">
+                <h1 class="fs-4 p-1"><img src="./img/logo.png" alt="logo" class="logo"> Mindhub Brothers Bank</h1>                
+                <h3 class="p-1 fs-5">Hi, {{clients.firstName}}! <img src="./img/user.png" alt="login" class="logo"></h3>                                   
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark gradient p-1">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarText">
+                        <ul class="navbar-nav mb-2 mb-lg-0 fs-5 w-50 justify-content-center gap-5 w-75">                        
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./accounts.html"><img src="./img/accounting.png" alt=""> Accounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./cards.html"><img src="./img/credit-card.png" alt=""> Cards</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./transfers.html"><img src="./img/transfer-money.png" alt=""> Transfers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./loan-application.html"><img src="./img/personal.png" alt=""> Loans</a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="./payments.html"><img src="./img/payment-method.png" alt=""> Payments</a>
+                            </li>  
+                            <li v-show="email == 'admin@admin'">
+                                <a href="./loan-admin.html" class="nav-link">Create Loan</a>
+                            </li>    
+                            <li>  
+                                <a href="#" class="nav-link" @click="logOut()"><img src="./img/logout.png" alt="log out">Log out</a>
+                            </li>                                                  
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="d-flex justify-content-center">
+            <form action="" class="w-50 mt-4">
+                <h5>Type of loan</h5>
+                <select class="form-select w-100" aria-label="Default select example"  v-model="loanId" >
+                    <option v-for="loan in loans" :value="loan.id">{{loan.name}} Interest: {{loan.interest}} %</option>                
+                </select>
+                <h5>Payments</h5>
+                <select v-if="loanId" class="form-select w-100" aria-label="Default select example"  v-model="payments">
+                    <option v-for="payment in loans.filter(l => l.id == loanId)[0].payments" :value="payment">{{payment}}</option>            
+                </select>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" v-model="amount" required>
+                <h5>Destiny account</h5>
+                <select class="form-select w-100" aria-label="Default select example"  v-model="accountDestination">
+                    <option  v-for="account in accounts" :value="account.number" v-show="account.accountActive == true">{{account.number}}</option>
+                </select>
+                <label for="subtotal">Montly fee</label>
+                <div v-if="loanId && amount > 0">
+                    <input type="text" disabled :value="((loans.filter(l => l.id == loanId)[0].interest * amount / 100) + amount) / payments">
+                    <label for="total">Total to pay</label>
+                    <input type="text" disabled :value="(loans.filter(l => l.id == loanId)[0].interest * amount / 100) + amount">
+                </div>
+                <div v-if="amount == '' || loanId == '' || payments == '' || accountDestination == ''">
+                    <button type="button" disabled class="btn btn-dark gradient" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Apply
+                </button>
+                </div>
+
+                <div v-else>
+                    <button type="button" class="btn btn-dark gradient" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Apply
+                </button>
+                </div>
+                
+            </form>
+        </main>
+        
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirm your transfer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Destination account: {{accountDestination}}</p>
+                        <p>Amount: {{moneyFormat(amount)}}</p>
+                        <p>Payments: {{payments}}</p>                                                                       
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" @click="newLoan()">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="gradient">
+            <p class="footer text-center">Miranda Estupiñan - Mindhub Cohort 30 - Full Stack developer</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./loan-application.js"></script>
+</body>
+</html>

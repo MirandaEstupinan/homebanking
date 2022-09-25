@@ -1,0 +1,850 @@
+* {
+    box-sizing: border-box;
+}
+
+tr th {
+    color: white;
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgba(10, 55, 103, 1) 4%, rgba(13, 13, 77, 1) 52%, rgba(2, 0, 36, 1) 94%);
+}
+
+.logo {
+    height: 50px;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+@media (min-width: 375px) {
+    .divLogo {
+        width: 100%;
+
+    }
+
+    .cardsAccounts {
+        width: 300px !important;
+    }
+
+    header {
+        min-height: 15vh;
+        background-color: #F8F9FA;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    main {
+        min-height: 75vh;
+        background-color: #F8F9FA;
+    }
+
+    li img {
+        width: 25px;
+    }
+
+    .creditCardImg {
+        width: 200px;
+    }
+
+    .creditCardImgMan {
+        width: 200px;
+    }
+
+    .indexBank {
+        width: 290px;
+    }
+
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 405px;
+        max-width: 100%;
+        min-height: 480px;
+        padding: 0 !important;
+    }
+
+    form {
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        height: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    form {
+        padding: 50px;
+    }
+
+    .cardsAccounts {
+        width: 300px;
+    }
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 745px;
+        max-width: 100%;
+        min-height: 480px;
+    }
+
+    .creditCardImg {
+        width: 500px;
+        height: 600px;
+        margin: auto;
+    }
+
+    .creditCardImgMan {
+        width: 350px;
+    }
+
+    .indexBank {
+        width: 500px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .creditCardImgMan {
+        width: 500px;
+    }
+
+}
+
+@media(min-width: 1440px) {
+   
+
+    .creditCardImg {
+        width: 500px;
+        height: 600px;
+        margin: 0;
+    }
+
+    .creditCardImgMan {
+        width: 500px;
+    }
+
+    #divCards {
+        flex-direction: row !important;
+    }
+}
+
+.loanImg {
+    width: 100px;
+    height: 100px;
+}
+
+.creditCard {
+    width: 320px;
+    height: 190px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+
+}
+
+.card__part__Gold {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    font-family: Share Tech Mono;
+    background-color: #9BA7B2;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    border: 1px solid grey;
+    margin: auto;
+    background:
+        -moz-linear-gradient(-72deg,
+            #ffde45,
+            #ffffff 16%,
+            #ffde45 21%,
+            #ffffff 24%,
+            #452100 27%,
+            #ffde45 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #ffde45 72%,
+            #ffffff 80%,
+            #ffde45 84%,
+            #452100);
+    background:
+        -webkit-linear-gradient(-72deg,
+            #ffde45,
+            #ffffff 16%,
+            #ffde45 21%,
+            #ffffff 24%,
+            #452100 27%,
+            #ffde45 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #ffde45 72%,
+            #ffffff 80%,
+            #ffde45 84%,
+            #452100);
+    background:
+        -o-linear-gradient(-72deg,
+            #ffde45,
+            #ffffff 16%,
+            #ffde45 21%,
+            #ffffff 24%,
+            #452100 27%,
+            #ffde45 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #ffde45 72%,
+            #ffffff 80%,
+            #ffde45 84%,
+            #452100);
+    background:
+        linear-gradient(-72deg,
+            #ffde45,
+            #ffffff 16%,
+            #ffde45 21%,
+            #ffffff 24%,
+            #452100 27%,
+            #ffde45 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #ffde45 72%,
+            #ffffff 80%,
+            #ffde45 84%,
+            #452100);
+
+    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card__part__Silver {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    font-family: Share Tech Mono;
+    background-color: #9BA7B2;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    border: 1px solid grey;
+    margin: auto;
+    background:
+        -moz-linear-gradient(-72deg,
+            #dedeff,
+            #ffffff 16%,
+            #dedeff 21%,
+            #ffffff 24%,
+            #555564 27%,
+            #dedeff 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedeff 72%,
+            #ffffff 80%,
+            #dedeff 84%,
+            #555564);
+    background:
+        -webkit-linear-gradient(-72deg,
+            #dedeff,
+            #ffffff 16%,
+            #dedeff 21%,
+            #ffffff 24%,
+            #555564 27%,
+            #dedeff 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedeff 72%,
+            #ffffff 80%,
+            #dedeff 84%,
+            #555564);
+    background:
+        -o-linear-gradient(-72deg,
+            #dedeff,
+            #ffffff 16%,
+            #dedeff 21%,
+            #ffffff 24%,
+            #555564 27%,
+            #dedeff 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedeff 72%,
+            #ffffff 80%,
+            #dedeff 84%,
+            #555564);
+    background:
+        linear-gradient(-72deg,
+            #dedeff,
+            #ffffff 16%,
+            #dedeff 21%,
+            #ffffff 24%,
+            #555564 27%,
+            #dedeff 36%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedeff 72%,
+            #ffffff 80%,
+            #dedeff 84%,
+            #555564);
+    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card__part__Titanium {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    font-family: Share Tech Mono;
+    background-color: #9BA7B2;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    border: 1px solid grey;
+    margin: auto;
+    background:
+        -moz-linear-gradient(-72deg,
+            #dedede,
+            #ffffff 16%,
+            #dedede 21%,
+            #ffffff 24%,
+            #caa1de 27%,
+            #dea1ca 30%,
+            #dedede 38%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedede 72%,
+            #ffffff 80%,
+            #dedede 84%,
+            #caa1de 93%,
+            #dea1ca);
+    background:
+        -webkit-linear-gradient(-72deg,
+            #dedede,
+            #ffffff 16%,
+            #dedede 21%,
+            #ffffff 24%,
+            #caa1de 27%,
+            #dea1ca 30%,
+            #dedede 38%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedede 72%,
+            #ffffff 80%,
+            #dedede 84%,
+            #caa1de 93%,
+            #dea1ca);
+    background:
+        -o-linear-gradient(-72deg,
+            #dedede,
+            #ffffff 16%,
+            #dedede 21%,
+            #ffffff 24%,
+            #caa1de 27%,
+            #dea1ca 30%,
+            #dedede 38%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedede 72%,
+            #ffffff 80%,
+            #dedede 84%,
+            #caa1de 93%,
+            #dea1ca);
+    background:
+        linear-gradient(-72deg,
+            #dedede,
+            #ffffff 16%,
+            #dedede 21%,
+            #ffffff 24%,
+            #caa1de 27%,
+            #dea1ca 30%,
+            #dedede 38%,
+            #ffffff 45%,
+            #ffffff 60%,
+            #dedede 72%,
+            #ffffff 80%,
+            #dedede 84%,
+            #caa1de 93%,
+            #dea1ca);
+    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+
+.card__front {
+    padding: 18px;
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+}
+
+.card__back {
+    padding: 18px 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+}
+
+.card__black-line {
+    margin-top: 5px;
+    height: 38px;
+    background-color: #222222;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: transparent;
+    text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+        1px 1px 1px rgba(0, 0, 0, 1),
+        1px 0px 1px rgba(255, 255, 255, 1),
+        -1px -1px 1px rgba(0, 0, 0, 1),
+        -1px 1px 1px rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+
+}
+
+.card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgb(77, 69, 69);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+
+}
+
+.card__info {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgb(77, 69, 69);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+}
+
+.card__back-content {
+    padding: 15px 15px 0;
+}
+
+.card__secret--last {
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: #fff;
+    position: relative;
+}
+
+.card__secret:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 42px);
+    border-radius: 4px;
+    background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+}
+
+
+.creditCard:hover .card__front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+
+}
+
+.creditCard:hover .card__back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+}
+
+.holo {
+    background: linear-gradient(270deg, #ec1414, #eccb14, #14ec1c, #14eaec, #1914ec, #ec14da);
+    background-size: 1200% 1200%;
+    -webkit-animation: Logo 4s ease infinite;
+    -moz-animation: Logo 4s ease infinite;
+    -o-animation: Logo 4s ease infinite;
+    animation: Logo 4s ease infinite;
+    width: 45px;
+    height: 25px;
+    z-index: 19;
+    border-radius: 55px;
+    position: absolute;
+    top: 58px;
+    left: 50px;
+}
+
+@keyframes Logo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.title {
+    font-family: Signika;
+    color: rgb(77, 69, 69);
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.8;
+    display: inline-block;
+}
+
+
+
+.small-type {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 100px;
+    line-height: 10px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.exp {
+    font-size: 32px;
+    padding-left: 100px;
+    text-shadow: -2px -1px 1px rgba(255, 255, 255, 1),
+        1px 1px 1px rgba(0, 0, 0, 1),
+        1px 0px 1px rgba(255, 255, 255, 1),
+        -1px -1px 1px rgba(0, 0, 0, 1),
+        -1px 1px 1px rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes Logo {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+.buttonLogin {
+    border-radius: 20px;
+    background: linear-gradient(-125deg, #1D3349, #06121E 55%);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: #FFFFFF;
+}
+
+
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: linear-gradient(-125deg, #1D3349, #06121E 55%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+.buttonLogOut {
+    background-color: transparent;
+    color: white;
+    width: 150px;
+}
+
+.buttonLogOut img {
+    width: 20px;
+}
+
+.navbarIndex {
+    height: 5vh;
+}
+
+.btn-create {
+    color: white;
+    text-decoration: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+.footer{
+    color: white !important;
+    font-size: 20px;
+}
+
+.cardIndex{
+    background-position: 0%;
+    width: 400px !important;
+    height: 250px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+
+.cardIndex img{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+.cardIndex img:hover{
+    transform: scale(1.05);
+    transition: all 300ms ease-out 0s;
+}
+
+.cardIndexContain{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+}
+
+/* #deleteCard{
+    position: absolute;
+    top: -100px !important;
+    
+} */
+
+.cardExpired{
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    font-family: Share Tech Mono;
+    background-color: #9BA7B2;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1);
+    border: 1px solid grey;
+    margin: auto;
+    background: red;
+
+    -webkit-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+tr{
+    font-size: 15px;
+}
