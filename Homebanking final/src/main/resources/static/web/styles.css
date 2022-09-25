@@ -27,7 +27,10 @@ tr th {
 @media (min-width: 375px) {
     .divLogo {
         width: 100%;
+    }
 
+    tr{
+        font-size: 15px;
     }
 
     .cardsAccounts {
@@ -94,6 +97,11 @@ tr th {
 }
 
 @media (min-width: 768px) {
+
+    tr{
+        font-size: 15px;
+    }
+    
     .card_numer {
         display: block;
         width: 100%;
@@ -849,6 +857,4 @@ input {
     -moz-backface-visibility: hidden;
 }
 
-tr{
-    font-size: 15px;
-}
+
